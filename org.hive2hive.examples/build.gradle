@@ -1,0 +1,5 @@
+
+description = 'Hive2Hive Examples'
+dependencies {
+  compile project(':org.hive2hive.core')
+}

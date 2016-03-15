@@ -1,0 +1,8 @@
+rootProject.name = 'org.hive2hive.parent'
+include ':org.hive2hive.core'
+include ':org.hive2hive.client'
+include ':org.hive2hive.examples'
+
+project(':org.hive2hive.core').projectDir = "$rootDir/org.hive2hive.core" as File
+project(':org.hive2hive.client').projectDir = "$rootDir/org.hive2hive.client" as File
+project(':org.hive2hive.examples').projectDir = "$rootDir/org.hive2hive.examples" as File

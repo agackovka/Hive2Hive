@@ -17,12 +17,7 @@ import org.hive2hive.core.utils.helper.TestFileAgent;
 import org.hive2hive.processframework.exceptions.InvalidProcessStateException;
 import org.hive2hive.processframework.exceptions.ProcessExecutionException;
 import org.hive2hive.processframework.interfaces.IProcessComponent;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 public class UserManagerTest extends H2HJUnitTest {
 
@@ -53,6 +48,7 @@ public class UserManagerTest extends H2HJUnitTest {
 	}
 
 	@Test
+	@Ignore
 	public void isRegisteredTest() throws NoPeerConnectionException, InterruptedException, InvalidProcessStateException,
 			ProcessExecutionException {
 		UserCredentials userCredentials = generateRandomCredentials();
@@ -77,6 +73,7 @@ public class UserManagerTest extends H2HJUnitTest {
 	}
 
 	@Test
+	@Ignore
 	public void isLoggedInTest() throws NoPeerConnectionException, InterruptedException, NoSessionException,
 			InvalidProcessStateException, ProcessExecutionException {
 		UserCredentials userCredentials = generateRandomCredentials();

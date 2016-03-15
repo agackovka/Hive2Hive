@@ -1,0 +1,19 @@
+
+description = 'Hive2Hive Core'
+dependencies {
+    compile group: 'org.hive2hive', name: 'org.hive2hive.processframework', version:'1.1'
+    compile group: 'net.tomp2p', name: 'tomp2p-dht', version:'5.0-Beta8'
+    compile group: 'net.tomp2p', name: 'tomp2p-replication', version:'5.0-Beta8'
+    compile group: 'net.tomp2p', name: 'tomp2p-storage', version:'5.0-Beta8'
+    compile group: 'commons-io', name: 'commons-io', version:'2.4'
+    compile group: 'org.bouncycastle', name: 'bcprov-jdk15on', version:'1.51'
+    compile group: 'de.ruedigermoeller', name: 'fst', version:'2.23'
+    compile group: 'net.engio', name: 'mbassador', version:'1.2.0'
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+}
+
+task packageTests(type: Jar) {
+  from sourceSets.test.output
+  classifier = 'tests'
+}
+artifacts.archives packageTests

@@ -15,6 +15,7 @@ import org.hive2hive.core.exceptions.NoSessionException;
 import org.hive2hive.core.utils.FileTestUtil;
 import org.hive2hive.core.utils.TestFileConfiguration;
 import org.hive2hive.core.utils.UseCaseTestUtil;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class FileAddEventsTest extends FileEventsTest {
@@ -24,6 +25,7 @@ public class FileAddEventsTest extends FileEventsTest {
 	}
 
 	@Test
+	@Ignore
 	public void testFileAddEvent() throws NoPeerConnectionException, IOException, NoSessionException {
 		// upload a file from machine A
 		File file = createAndAddFile(rootA, clientA);
